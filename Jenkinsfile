@@ -8,9 +8,9 @@ node ('maven') {
       //build using maven
       sh 'mvn clean install -DskipTests'
    }
-   stage('repots'){
+   //stage('repots'){
       //all reopts 
-      junit 'target/surefire-reports/*.xml'
+     // junit 'target/surefire-reports/*.xml'
    }
     stage('SonarQube analysis') {
     withSonarQubeEnv('sonarqube-6.7') { // You can override the credential to be useddd
